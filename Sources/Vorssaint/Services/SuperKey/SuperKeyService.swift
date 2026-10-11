@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import ApplicationServices
@@ -206,7 +206,7 @@ final class SuperKeyService: ObservableObject {
             shouldStopTapThread = false
             pendingTapRestart = false
             let thread = Thread { [weak self] in self?.runEventTap() }
-            thread.name = "Canopy Super Key"
+            thread.name = "Roof Super Key"
             thread.qualityOfService = .userInteractive
             tapThread = thread
             return thread

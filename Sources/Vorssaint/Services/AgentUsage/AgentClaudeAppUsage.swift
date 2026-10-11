@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Foundation
 
 /// The Claude app checks the plan's limits itself and keeps a month of them on
 /// this Mac, a percentage for each window every few minutes, while its menu
-/// bar icon is on. That file is all Canopy reads for them: no sign-in is
+/// bar icon is on. That file is all Roof reads for them: no sign-in is
 /// used and nothing is sent. The format is the app's own, so a version or an
 /// entry this reader does not know is left out rather than guessed.
 enum AgentClaudeAppUsage {

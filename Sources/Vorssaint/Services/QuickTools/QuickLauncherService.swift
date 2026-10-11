@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Carbon.HIToolbox
@@ -44,7 +44,7 @@ enum QuickLauncherItem: String, PanelOrderItem, Identifiable {
 
 /// The floating quick panel: a small, pretty launcher with the user's
 /// favorite tools, summoned from anywhere with a global shortcut (⌃⌘V by
-/// default; V for Canopy). Fully customizable in place: items can be
+/// default; V for Roof). Fully customizable in place: items can be
 /// hidden, brought back and reordered by dragging.
 final class QuickLauncherService: ObservableObject {
     static let shared = QuickLauncherService()
@@ -347,7 +347,7 @@ final class QuickLauncherService: ObservableObject {
                                          styleMask: [.borderless, .nonactivatingPanel],
                                          backing: .buffered,
                                          defer: false)
-        panel.title = "Canopy"
+        panel.title = "Roof"
         panel.isReleasedWhenClosed = false
         // Item drag-to-reorder needs the mouse drag for itself; a background-
         // movable window would win the gesture and drag the whole panel.

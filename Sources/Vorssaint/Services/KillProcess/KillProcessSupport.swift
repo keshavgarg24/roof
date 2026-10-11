@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Foundation
 
@@ -66,7 +66,7 @@ enum KillProcessSupport {
         let lowerPath = path.trimmingCharacters(in: .whitespaces).lowercased()
         let protectedNames: Set<String> = [
             "kernel_task", "launchd", "windowserver", "loginwindow",
-            "canopy", "canopy (developer)", "canopydeveloper"
+            "roof", "roof (developer)", "roofdeveloper"
         ]
         if protectedNames.contains(lowerName) { return true }
         if lowerPath.hasSuffix("/windowserver") || lowerPath.hasSuffix("/loginwindow") || lowerPath.hasSuffix("/launchd") {

@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import IOKit.pwr_mgt
 
-/// Quick subsystem check, run with `Canopy --selftest`.
+/// Quick subsystem check, run with `Roof --selftest`.
 /// Core capabilities fail the test; hardware-dependent readings only warn.
 enum SelfTest {
     static func runAndExit() -> Never {
@@ -14,7 +14,7 @@ enum SelfTest {
         var assertionID = IOPMAssertionID(0)
         let result = IOPMAssertionCreateWithName("PreventUserIdleSystemSleep" as CFString,
                                                  IOPMAssertionLevel(kIOPMAssertionLevelOn),
-                                                 "Canopy selftest" as CFString,
+                                                 "Roof selftest" as CFString,
                                                  &assertionID)
         if result == kIOReturnSuccess {
             IOPMAssertionRelease(assertionID)
@@ -192,7 +192,7 @@ enum SelfTest {
 }
 
 /// Prints every temperature sensor the monitor would consider, with its
-/// classification. Run with `Canopy --sensors`; handy when porting
+/// classification. Run with `Roof --sensors`; handy when porting
 /// the sensor mapping to a new chip generation.
 enum SensorDump {
     static func runAndExit() -> Never {

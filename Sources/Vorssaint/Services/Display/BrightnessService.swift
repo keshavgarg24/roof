@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import IOKit.graphics
@@ -1262,7 +1262,7 @@ final class BrightnessService: ObservableObject {
             shouldStopFunctionKeyThread = false
             pendingFunctionKeyRestart = false
             let thread = Thread { [weak self] in self?.runFunctionKeyTap() }
-            thread.name = "Canopy Brightness Keys"
+            thread.name = "Roof Brightness Keys"
             thread.qualityOfService = .userInteractive
             functionKeyThread = thread
             return thread

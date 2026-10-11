@@ -1,14 +1,14 @@
 #!/bin/zsh
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (C) 2026 Canopy
+# Copyright (C) 2026 Roof
 
 # Packages the built app into a styled, distributable DMG
-# (dist/Canopy-<version>.dmg): a window with the app icon, an arrow and
+# (dist/Roof-<version>.dmg): a window with the app icon, an arrow and
 # the Applications folder for drag-and-drop install. Run ./build.sh first.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-APP_NAME="Canopy"
+APP_NAME="Roof"
 APP="build/stage/$APP_NAME.app"
 VOLUME="$APP_NAME"
 STAGING=""
@@ -34,7 +34,7 @@ xattr -cr "$APP"
 codesign --verify --deep --strict "$APP"
 
 VERSION="$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' "$APP/Contents/Info.plist")"
-OUT="dist/Canopy-$VERSION.dmg"
+OUT="dist/Roof-$VERSION.dmg"
 
 echo "▸ Rendering installer background…"
 swift Tools/MakeDMGBackground.swift build/dmg-background.png

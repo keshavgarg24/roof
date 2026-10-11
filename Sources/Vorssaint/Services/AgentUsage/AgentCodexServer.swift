@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Darwin
 import Foundation
@@ -25,7 +25,7 @@ struct AgentCodexResetSummary: Equatable {
 }
 
 /// Codex's own server, started for one short conversation at a time, answers
-/// for the account. It signs in with Codex's credentials, which Canopy
+/// for the account. It signs in with Codex's credentials, which Roof
 /// never reads, and hears only the questions asked here.
 enum AgentCodexServer {
     enum Failure: Error, Equatable {
@@ -231,7 +231,7 @@ final class AgentCodexConversation {
     /// Introduces the app, as every conversation must begin.
     func start() -> Result<Void, AgentCodexServer.Failure> {
         let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0"
-        let client: [String: Any] = ["name": "canopy", "title": "Canopy", "version": version]
+        let client: [String: Any] = ["name": "roof", "title": "Roof", "version": version]
         return ask("initialize", ["clientInfo": client, "capabilities": NSNull()])
             .flatMap { _ -> Result<Void, AgentCodexServer.Failure> in
                 send(["method": "initialized"]) ? .success(()) : .failure(.unreachable)

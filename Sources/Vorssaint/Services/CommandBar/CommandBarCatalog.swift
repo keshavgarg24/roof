@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 
@@ -1198,7 +1198,7 @@ enum CommandBarCatalog {
     // MARK: - Running apps and their windows
 
     /// Menu commands of the app in front, each one runnable and each one
-    /// showing its own shortcut. This is how the bar reaches past Canopy
+    /// showing its own shortcut. This is how the bar reaches past Roof
     /// without searching files or the internet.
     static func menuEntries(_ items: [CommandBarMenuItem],
                             appName: String,

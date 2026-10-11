@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Foundation
 
@@ -76,7 +76,7 @@ enum CommandBarRowShortcuts {
     }
 
     /// What a row does with a combination macOS may answer, once every
-    /// Canopy-side check has passed: the same rule every other shortcut
+    /// Roof-side check has passed: the same rule every other shortcut
     /// field follows, so the row can offer to take the key over instead of
     /// refusing a combination another field would accept.
     static func takeOverDecision(_ shortcut: GlobalShortcut, for key: String,

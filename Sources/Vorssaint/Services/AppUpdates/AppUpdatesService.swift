@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Combine
@@ -819,7 +819,7 @@ final class AppUpdatesService: ObservableObject {
         bundleID == Bundle.main.bundleIdentifier || bundleID.hasPrefix("com.vorssaint")
     }
 
-    private static let ownPackageTokens: Set<String> = ["canopy", "canopy@beta", "canopy-beta"]
+    private static let ownPackageTokens: Set<String> = ["roof", "roof", "roof-beta"]
 
     /// The package manager refreshes its own catalog on the way, which can sit
     /// on a slow network. A ceiling keeps a stalled command from leaving the

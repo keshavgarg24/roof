@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import ApplicationServices
@@ -256,7 +256,7 @@ enum WindowActivator {
     ///
     /// Our own windows are refused rather than special-cased: reading this
     /// process's own Accessibility tree from the main thread is the one call
-    /// that can deadlock, and Canopy has no Dock icon to drag a preview
+    /// that can deadlock, and Roof has no Dock icon to drag a preview
     /// from in the first place.
     @discardableResult
     static func setWindowOrigin(_ origin: CGPoint, windowID: CGWindowID, pid: pid_t) -> Bool {

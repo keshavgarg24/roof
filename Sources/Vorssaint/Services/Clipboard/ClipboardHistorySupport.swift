@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Carbon.HIToolbox
@@ -1010,7 +1010,7 @@ extension NSPasteboard.PasteboardType {
 }
 
 extension NSPasteboard {
-    /// Signs a write Canopy makes for itself (copied OCR text, a Command
+    /// Signs a write Roof makes for itself (copied OCR text, a Command
     /// Bar answer, a color), so the clipboard history does not credit it to
     /// whichever app happens to be in front. Called once the pasteboard is
     /// cleared, before or after the content: either way the mark joins the

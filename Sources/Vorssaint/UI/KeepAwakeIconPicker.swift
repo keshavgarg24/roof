@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import SwiftUI
 
@@ -98,7 +98,7 @@ struct KeepAwakeIconPicker: View {
         .accessibilityLabel(title(icon))
     }
 
-    /// The Canopy choice draws whatever the menu bar shows, which can be a
+    /// The Roof choice draws whatever the menu bar shows, which can be a
     /// symbol chosen in the menu bar settings.
     private func title(_ icon: KeepAwakeActiveIcon) -> String {
         guard icon == .vorssaint,

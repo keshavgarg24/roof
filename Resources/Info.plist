@@ -7,15 +7,15 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Canopy</string>
+	<string>Roof</string>
 	<key>CFBundleExecutable</key>
-	<string>Canopy</string>
+	<string>Roof</string>
 	<key>CFBundleIconFile</key>
 	<string>AppIcon</string>
 	<key>CFBundleIconName</key>
 	<string>AppIcon</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.canopy.mac</string>
+	<string>com.roof.place</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleLocalizations</key>
@@ -37,7 +37,7 @@
 		<string>zh-HK</string>
 	</array>
 	<key>CFBundleName</key>
-	<string>Canopy</string>
+	<string>Roof</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -55,11 +55,11 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSAppleEventsUsageDescription</key>
-	<string>Canopy uses Automation to move files, send items to the Trash, open requested commands and control playback in your media apps.</string>
+	<string>Roof uses Automation to move files, send items to the Trash, open requested commands and control playback in your media apps.</string>
 	<key>NSAudioCaptureUsageDescription</key>
-	<string>Canopy uses each app's audio to adjust its volume in the mixer, to move Dynamic Island's music bars and to include the Mac's sound in the screen recordings you start. Nothing leaves your Mac.</string>
+	<string>Roof uses each app's audio to adjust its volume in the mixer, to move Dynamic Island's music bars and to include the Mac's sound in the screen recordings you start. Nothing leaves your Mac.</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Canopy uses Bluetooth only to read the battery level of connected peripherals. Nothing leaves your Mac.</string>
+	<string>Roof uses Bluetooth only to read the battery level of connected peripherals. Nothing leaves your Mac.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Vorssaint records your microphone only when you turn it on for a screen recording. The audio stays on your Mac unless you choose to create a temporary link.</string>
 	<key>NSCalendarsFullAccessUsageDescription</key>
@@ -79,7 +79,7 @@
 	<key>NSCameraUseContinuityCameraDeviceType</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2026 Canopy</string>
+	<string>© 2026 Roof</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

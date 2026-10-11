@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import ImageIO
@@ -78,7 +78,7 @@ final class ScreenshotService: ObservableObject {
         return ids
     }
 
-    /// Ordinary windows somebody left on screen, which the "Hide Canopy
+    /// Ordinary windows somebody left on screen, which the "Hide Roof
     /// windows" preference owns.
     private var contentWindowIDs: Set<CGWindowID> {
         var ids: Set<CGWindowID> = []
@@ -851,7 +851,7 @@ final class ScreenshotService: ObservableObject {
     }
 
     /// The shelf gets a copy of its own, not the file a Save wrote, which can
-    /// later be deleted or moved to the Trash outside Canopy. A saved
+    /// later be deleted or moved to the Trash outside Roof. A saved
     /// capture lends its bytes and name, so nothing is encoded twice. Any
     /// other is encoded off the main thread. Each capture owns its task so
     /// taking another capture cannot lose one still being prepared. Quiet on

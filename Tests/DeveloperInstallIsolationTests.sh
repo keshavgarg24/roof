@@ -1,6 +1,6 @@
 #!/bin/zsh
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (C) 2026 Canopy
+# Copyright (C) 2026 Roof
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -24,30 +24,30 @@ sign_installed_bundle() { signed+=("$1"); }
 for DEV in 1 0; do
     stopped=()
     signed=()
-    for name in Vorss 'Canopy Utils' Canopy 'Canopy (Developer)'; do
+    for name in Vorss 'Roof Utils' Roof 'Roof (Developer)'; do
         mkdir -p "$install_test_dir/Applications/$name.app"
         print original > "$install_test_dir/Applications/$name.app/content"
     done
     if (( DEV )); then
-        APP_NAME='Canopy (Developer)'
-        EXECUTABLE=CanopyDeveloper
+        APP_NAME='Roof (Developer)'
+        EXECUTABLE=RoofDeveloper
     else
-        APP_NAME=Canopy
-        EXECUTABLE=Canopy
+        APP_NAME=Roof
+        EXECUTABLE=Roof
     fi
     source "$install_test_dir/install.zsh"
     [[ "$(cat "$install_test_dir/Applications/$APP_NAME.app/content")" == new ]]
     [[ "${signed[*]}" == "$install_test_dir/Applications/$APP_NAME.app" ]]
     if (( DEV )); then
-        [[ "${stopped[*]}" == CanopyDeveloper ]]
-        for name in Vorss 'Canopy Utils' Canopy; do
+        [[ "${stopped[*]}" == RoofDeveloper ]]
+        for name in Vorss 'Roof Utils' Roof; do
             [[ "$(cat "$install_test_dir/Applications/$name.app/content")" == original ]]
         done
     else
-        [[ "${stopped[*]}" == 'Canopy Vorss CanopyUtils' ]]
+        [[ "${stopped[*]}" == 'Roof Vorss RoofUtils' ]]
         [[ ! -e "$install_test_dir/Applications/Vorss.app" ]]
-        [[ ! -e "$install_test_dir/Applications/Canopy Utils.app" ]]
-        [[ "$(cat "$install_test_dir/Applications/Canopy (Developer).app/content")" == original ]]
+        [[ ! -e "$install_test_dir/Applications/Roof Utils.app" ]]
+        [[ "$(cat "$install_test_dir/Applications/Roof (Developer).app/content")" == original ]]
     fi
 done
 print 'DEVELOPER INSTALL ISOLATION TESTS OK'

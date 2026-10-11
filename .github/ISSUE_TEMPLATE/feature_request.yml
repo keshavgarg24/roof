@@ -1,5 +1,5 @@
 name: "✨ Feature Request"
-description: Suggest a new feature or improvement for Canopy
+description: Suggest a new feature or improvement for Roof
 labels:
   - enhancement
 
@@ -28,7 +28,7 @@ body:
     attributes:
       label: Proposed Solution
       description: Describe the solution you'd like to see.
-      placeholder: It would be great if Canopy could...
+      placeholder: It would be great if Roof could...
     validations:
       required: true
 

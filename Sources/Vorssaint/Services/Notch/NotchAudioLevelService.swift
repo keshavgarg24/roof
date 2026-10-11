@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Accelerate
 import AppKit
@@ -290,7 +290,7 @@ private final class NotchAudioLevelReader {
         guard !objects.isEmpty else { return false }
         tapped = objects
         let description = CATapDescription(stereoMixdownOfProcesses: objects)
-        description.name = "Canopy Island Levels"
+        description.name = "Roof Island Levels"
         description.isPrivate = true
         description.muteBehavior = .unmuted
         var tapID = AudioObjectID(0)
@@ -331,7 +331,7 @@ private final class NotchAudioLevelReader {
     private func buildPipeline() -> Bool {
         guard aggregateID == 0, tapID != 0, let hostUID = Self.hostDeviceUID() else { return false }
         let aggregate: [String: Any] = [
-            kAudioAggregateDeviceNameKey: "Canopy Island Levels",
+            kAudioAggregateDeviceNameKey: "Roof Island Levels",
             kAudioAggregateDeviceUIDKey: UUID().uuidString,
             kAudioAggregateDeviceIsPrivateKey: true,
             kAudioAggregateDeviceMainSubDeviceKey: hostUID,

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Carbon.HIToolbox
@@ -30,7 +30,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate, NSW
     private var popoverForeignReopenAt = Date.distantPast
     private var popoverIsSwitchingAnchor = false
     /// The app to hand activation back to when the panel is dismissed, so
-    /// Canopy does not stay in front. Captured when a click opens the panel
+    /// Roof does not stay in front. Captured when a click opens the panel
     /// and kept current by the observers below while the panel is shown.
     private var panelActivationSource: NSRunningApplication?
     private var panelActivationObservers: [NSObjectProtocol] = []
@@ -1323,7 +1323,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate, NSW
         endPanelActivationTracking()
         let ownPID = NSRunningApplication.current.processIdentifier
         let front = NSWorkspace.shared.frontmostApplication
-        // Opened while Canopy was already in front (from Settings, say):
+        // Opened while Roof was already in front (from Settings, say):
         // there is nothing to hand back when the panel closes.
         panelActivationSource = front?.processIdentifier == ownPID ? nil : front
         let center = NSWorkspace.shared.notificationCenter
@@ -1359,7 +1359,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate, NSW
         return source
     }
 
-    /// Closing the panel leaves Canopy active, and macOS keeps reporting it
+    /// Closing the panel leaves Roof active, and macOS keeps reporting it
     /// as the frontmost app until something else is focused, which misleads
     /// window managers and anything that follows the active app.
     private func returnActivation(to source: NSRunningApplication?, after closeReason: PanelCloseReason?) {
@@ -1651,7 +1651,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate, NSW
         editMenu.addItem(NSMenuItem(title: strings.menuPaste, action: #selector(NSText.paste(_:)), keyEquivalent: "v"))
         editMenu.addItem(NSMenuItem(title: strings.menuSelectAll, action: #selector(NSText.selectAll(_:)), keyEquivalent: "a"))
 
-        // Drivers and other running copies of Canopy may translate side buttons
+        // Drivers and other running copies of Roof may translate side buttons
         // into menu commands before this process ever receives a raw mouse event.
         let navigationMenuItem = NSMenuItem()
         navigationMenuItem.submenu = SettingsWindow.navigationMenu(language: L10n.shared.language)

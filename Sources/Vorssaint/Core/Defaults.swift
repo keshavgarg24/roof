@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import CoreGraphics
 import Carbon.HIToolbox
@@ -241,7 +241,7 @@ enum DefaultsKey {
     static let startupDidNotFinish = "startupDidNotFinish"
     static let bluetoothSleepEnabled = "bluetoothSleepEnabled"
     static let bluetoothSleepRestoreOnWake = "bluetoothSleepRestoreOnWake"
-    // Set only while Canopy owes a Bluetooth restore, so a Mac shut down
+    // Set only while Roof owes a Bluetooth restore, so a Mac shut down
     // while asleep still gets it back on the next launch.
     static let bluetoothSleepRestorePending = "bluetoothSleepRestorePending"
     static let musicBlockEnabled = "musicBlockEnabled"
@@ -2493,14 +2493,14 @@ enum Defaults {
     }
 
     /// A typed symbol name without the spaces around it; empty keeps the
-    /// Canopy glyph. Whether this Mac has the symbol is left to the menu
+    /// Roof glyph. Whether this Mac has the symbol is left to the menu
     /// bar drawing, since a backup can carry a name from a newer macOS.
     static func sanitizedMenuBarIconSymbol(_ rawValue: String?) -> String {
         rawValue?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
     }
 
     /// What the menu bar icon field saves as it is typed: a name this Mac has
-    /// a symbol for, nothing for the Canopy icon, and otherwise the name
+    /// a symbol for, nothing for the Roof icon, and otherwise the name
     /// the field opened with, so a typo never leaves a valid half behind.
     static func menuBarIconSymbolToSave(typed: String?, opening: String,
                                         exists: (String) -> Bool) -> String {
@@ -2508,7 +2508,7 @@ enum Defaults {
         return name.isEmpty || exists(name) ? name : opening
     }
 
-    /// The symbols the menu bar icon gallery offers after the Canopy icon:
+    /// The symbols the menu bar icon gallery offers after the Roof icon:
     /// solid shapes that still read at menu bar size, all present on macOS 14
     /// (some under older names, which later versions still accept). Keep
     /// Awake's symbols stay out, so an active session still stands out.

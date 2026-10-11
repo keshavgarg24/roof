@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Accelerate
 import Carbon.HIToolbox
@@ -130,7 +130,7 @@ enum ScreenshotSupport {
         let hideVorssaintWindows: Bool
         /// Whether editors and pinned captures stay out of the picture and the
         /// pickable windows. Recording keeps them out even while "Hide
-        /// Canopy windows" is off, which that flag alone cannot tell apart.
+        /// Roof windows" is off, which that flag alone cannot tell apart.
         let keepsContentWindowsOut: Bool
         let usesGeometry: Bool
 

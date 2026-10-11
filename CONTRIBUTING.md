@@ -1,6 +1,6 @@
-# Contributing to Canopy
+# Contributing to Roof
 
-Canopy aims to stay small, native and readable. Contributions are accepted
+Roof aims to stay small, native and readable. Contributions are accepted
 under GPL-3.0-or-later unless stated otherwise.
 
 ## Getting started
@@ -11,7 +11,7 @@ dependencies. `Package.swift` supports editor indexing; it does not assemble or
 sign the app bundle.
 
 ```sh
-git clone https://github.com/canopy/canopy-utils.git
+git clone https://github.com/keshavgarg24/roof.git
 cd canopy-utils
 ./build.sh --dev
 ./build/CanopyDeveloper --selftest
@@ -21,7 +21,7 @@ cd canopy-utils
 To install and launch the separate Developer app, use `./build.sh --dev --install`.
 It has its own preferences and permissions and does not replace the official app.
 A plain `./build.sh` builds the optimized variant used by CI; its health check is
-`./build/Canopy --selftest`.
+`./build/Roof --selftest`.
 
 ### Stable signing
 
@@ -41,7 +41,7 @@ direction in an issue. Explain the user need, required permissions, dependencies
 and ongoing maintenance. Prefer existing macOS capabilities and repository code
 over a new subsystem. Keep each PR focused on one independently useful change.
 
-- App lifecycle lives in `Sources/Canopy/App`, shared catalogs and preferences
+- App lifecycle lives in `Sources/Roof/App`, shared catalogs and preferences
   in `Core`, behavior in `Services`, views in `UI`, and diagnostics in `Support`.
   Keep reusable decisions outside views where they can be tested.
 - Check other callers and the upgrade path when fixing shared behavior.
@@ -54,7 +54,7 @@ over a new subsystem. Keep each PR focused on one independently useful change.
   permission prompts where applicable, and coverage tests.
 - New source files retain the project's SPDX license and copyright headers.
 
-Sensor changes should include a dump from `./build/Canopy --sensors` and the
+Sensor changes should include a dump from `./build/Roof --sensors` and the
 Mac model. Selection logic lives in `TemperatureSensorSelector` and `SystemMonitor`.
 
 ## Validation
@@ -97,7 +97,7 @@ a stable release carries the fix, and can close the issue after two weeks withou
 a response. If the PR addresses only part of an issue, say exactly which part.
 
 For agent-assisted work, see [contributing with an agent](docs/AI-CONTRIBUTIONS.md).
-Bug reports and feature requests use the [issue forms](https://github.com/canopy/canopy-utils/issues/new/choose).
+Bug reports and feature requests use the [issue forms](https://github.com/keshavgarg24/roof/issues/new/choose).
 Report vulnerabilities through [private security reporting](SECURITY.md).
 
 ## Releases (maintainers)

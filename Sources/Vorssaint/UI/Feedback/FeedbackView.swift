@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import SwiftUI
 
@@ -167,7 +167,7 @@ struct FeedbackView: View {
 
     private var diagnosticsPreview: some View {
         Grid(alignment: .leading, horizontalSpacing: 14, verticalSpacing: 5) {
-            diagnosticRow("Canopy", "\(diagnostics.appVersion) (\(diagnostics.appBuild))")
+            diagnosticRow("Roof", "\(diagnostics.appVersion) (\(diagnostics.appBuild))")
             diagnosticRow("macOS", diagnostics.macOS)
             if let model = diagnostics.macModel { diagnosticRow("Mac", model) }
             diagnosticRow(l10n.s.languageLabel, diagnostics.language)

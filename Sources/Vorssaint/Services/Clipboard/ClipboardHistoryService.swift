@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Carbon.HIToolbox
@@ -1255,7 +1255,7 @@ final class ClipboardHistoryService: ObservableObject {
 
     /// The entry is already on the clipboard, so a paste that cannot follow
     /// says so the way Paste as Plain Text does (#186) instead of doing nothing.
-    /// No target means the window opened over Canopy itself or an app
+    /// No target means the window opened over Roof itself or an app
     /// without a Dock icon, where a pick is only a copy and stays silent.
     private func pasteIntoPreviousApp(_ app: NSRunningApplication?) {
         guard let app else { return }

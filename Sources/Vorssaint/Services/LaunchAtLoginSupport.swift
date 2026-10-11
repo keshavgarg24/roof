@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Foundation
 
@@ -14,7 +14,7 @@ import Foundation
 enum LaunchAtLoginSupport {
     /// Settings keeps its view alive when the window closes, so onAppear
     /// alone cannot refresh a choice made in System Settings.
-    static let settingsRefreshRequested = Notification.Name("Canopy.launchAtLoginSettingsRefreshRequested")
+    static let settingsRefreshRequested = Notification.Name("Roof.launchAtLoginSettingsRefreshRequested")
 
     /// What the system holds for this app. `needsApproval` is a registration
     /// that exists but is not allowed to run. Background permission can block

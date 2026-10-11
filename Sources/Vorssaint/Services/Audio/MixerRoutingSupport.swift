@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import CoreAudio
 import Foundation
@@ -379,7 +379,7 @@ enum MixerRoutingSupport {
                                volumes: volumes)
     }
 
-    /// Canopy's own AirPlay entry, streamed through the system route picker.
+    /// Roof's own AirPlay entry, streamed through the system route picker.
     /// Exact match only: real AirPlay devices macOS exposes are ordinary outputs
     /// and route through the normal tap, and a device name or UID that merely
     /// mentions AirPlay must never be mistaken for this entry.

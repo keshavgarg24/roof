@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Foundation
 import ServiceManagement
 
-/// `Canopy --uninstall`: cleanly detaches the app from the system
+/// `Roof --uninstall`: cleanly detaches the app from the system
 /// before its bundle is removed. It unregisters the fan helper daemon and the
 /// login item — so no dead entry lingers in System Settings › General › Login
 /// Items — restores normal sleep if a closed-lid session left it disabled, and

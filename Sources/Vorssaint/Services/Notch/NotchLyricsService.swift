@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Combine
@@ -190,7 +190,7 @@ private final class NotchLyricsDownload: NSObject, URLSessionDataDelegate {
         configuration.urlCredentialStorage = nil
         configuration.httpCookieStorage = nil
         configuration.httpShouldSetCookies = false
-        configuration.httpAdditionalHeaders = ["User-Agent": "Canopy", "Accept": "application/json"]
+        configuration.httpAdditionalHeaders = ["User-Agent": "Roof", "Accept": "application/json"]
         let delegate = NotchLyricsDownload(completion: completion)
         let session = URLSession(configuration: configuration, delegate: delegate, delegateQueue: nil)
         session.dataTask(with: url).resume()

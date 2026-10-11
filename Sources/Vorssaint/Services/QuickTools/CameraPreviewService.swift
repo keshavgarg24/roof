@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import AVFoundation
@@ -362,7 +362,7 @@ final class CameraPreviewService: ObservableObject {
                                         styleMask: [.borderless, .nonactivatingPanel],
                                         backing: .buffered,
                                         defer: false)
-        panel.title = "Canopy"
+        panel.title = "Roof"
         panel.isReleasedWhenClosed = false
         // A mirror is something the user drags next to the meeting window.
         panel.isMovableByWindowBackground = true

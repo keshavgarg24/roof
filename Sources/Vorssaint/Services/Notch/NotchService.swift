@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Combine
@@ -844,7 +844,7 @@ final class NotchService: ObservableObject {
     }
     /// A detail's title, the app panel's, or the island's own with no sections.
     var detailTitle: String {
-        if showingAppPanel { return "Canopy" }
+        if showingAppPanel { return "Roof" }
         let language = L10n.shared.language
         guard let metric = selectedMetric else { return FeatureStrings.notch(language).title }
         // The fan card opens Fan Control, so its page shares that title.

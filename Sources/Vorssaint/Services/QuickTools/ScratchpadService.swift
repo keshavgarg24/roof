@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Carbon.HIToolbox
@@ -444,7 +444,7 @@ final class ScratchpadService: NSObject, ObservableObject, NSWindowDelegate {
                                            styleMask: [.borderless, .nonactivatingPanel, .resizable],
                                            backing: .buffered,
                                            defer: false)
-        panel.title = "Canopy"
+        panel.title = "Roof"
         panel.isReleasedWhenClosed = false
         // Dragging inside the pad must select text, never move the window;
         // the header strip is the handle.

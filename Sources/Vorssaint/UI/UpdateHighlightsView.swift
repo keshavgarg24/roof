@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import SwiftUI
 
@@ -20,7 +20,7 @@ struct UpdateHighlightsView: View {
         VStack(spacing: 16) {
             VStack(spacing: 4) {
                 Text(FeatureStrings.notch(l10n.language).title).font(.title2.weight(.semibold))
-                Text(AppInfo.isDeveloperBuild ? text.preview : "Canopy \(AppInfo.version)")
+                Text(AppInfo.isDeveloperBuild ? text.preview : "Roof \(AppInfo.version)")
                     .font(.caption).foregroundStyle(.secondary)
             }
             .frame(height: 42)

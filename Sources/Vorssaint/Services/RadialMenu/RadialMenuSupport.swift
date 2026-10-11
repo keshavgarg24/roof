@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import CoreGraphics
@@ -338,7 +338,7 @@ private struct FailableRadialMenuItem: Decodable {
     }
 }
 
-/// Canopy tools a slice can trigger. Raw values persist inside the items
+/// Roof tools a slice can trigger. Raw values persist inside the items
 /// blob; never rename them.
 enum RadialMenuTool: String, Codable, CaseIterable, Identifiable {
     case screenshot, screenRecorder, colorPicker, screenOCR, micMute, clipboardHistory, quickLauncher,
@@ -485,7 +485,7 @@ enum RadialMenuMediaKey: String, Codable, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    /// Now Playing opens Canopy's metadata card rather than posting a key.
+    /// Now Playing opens Roof's metadata card rather than posting a key.
     var auxKeyType: Int32? {
         switch self {
         case .playPause: return 16

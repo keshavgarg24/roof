@@ -125,10 +125,10 @@ jobs:
       - name: Verify release signature
         run: |
           REQUIREMENT='identifier "com.canopy.utils" and anchor apple generic and certificate leaf[subject.OU] = "3D485NHW29"'
-          codesign --verify --deep --strict -R="$REQUIREMENT" build/stage/Canopy.app
+          codesign --verify --deep --strict -R="$REQUIREMENT" build/stage/Roof.app
 
       - name: Selftest
-        run: ./build/Canopy --selftest
+        run: ./build/Roof --selftest
 
       - name: Notarize app
         env:
@@ -136,7 +136,7 @@ jobs:
           NOTARY_API_KEY_P8: ${{ secrets.NOTARY_API_KEY_P8 }}
           NOTARY_KEY_ID: ${{ secrets.NOTARY_KEY_ID }}
           NOTARY_ISSUER_ID: ${{ secrets.NOTARY_ISSUER_ID }}
-        run: ./Tools/notarize.sh build/stage/Canopy.app
+        run: ./Tools/notarize.sh build/stage/Roof.app
 
       - name: Package DMG
         run: ./Tools/make-dmg.sh
@@ -188,11 +188,11 @@ jobs:
           }
           trap cleanup EXIT
           hdiutil attach -nobrowse -readonly -mountpoint "$MP" "$DMG"
-          spctl -a -t exec -vv "$MP/Canopy.app" 2>&1 | tee /tmp/spctl.txt
+          spctl -a -t exec -vv "$MP/Roof.app" 2>&1 | tee /tmp/spctl.txt
           grep -q "source=Notarized Developer ID" /tmp/spctl.txt
           REQUIREMENT='identifier "com.canopy.utils" and anchor apple generic and certificate leaf[subject.OU] = "3D485NHW29"'
-          codesign --verify --deep --strict -R="$REQUIREMENT" "$MP/Canopy.app"
-          xcrun stapler validate "$MP/Canopy.app"
+          codesign --verify --deep --strict -R="$REQUIREMENT" "$MP/Roof.app"
+          xcrun stapler validate "$MP/Roof.app"
 
       - name: Release notes from CHANGELOG
         id: notes
@@ -207,7 +207,7 @@ jobs:
           {
             printf '%s\n' "$NOTES"
             echo ""
-            echo "Signed with an Apple Developer ID and notarized by Apple, so it downloads and opens normally. Requires macOS 14 or later. Open the .dmg below and drag Canopy to Applications."
+            echo "Signed with an Apple Developer ID and notarized by Apple, so it downloads and opens normally. Requires macOS 14 or later. Open the .dmg below and drag Roof to Applications."
           } > "$NOTES_FILE"
           {
             echo "file=$NOTES_FILE"

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Foundation
 
@@ -20,7 +20,7 @@ final class GeneralPasteboardAccess {
     private let now: () -> TimeInterval
     private let scheduleDeadline: DeadlineScheduler
 
-    init(label: String = "Canopy.Pasteboard.general",
+    init(label: String = "Roof.Pasteboard.general",
          now: @escaping () -> TimeInterval = {
              TimeInterval(DispatchTime.now().uptimeNanoseconds) / 1_000_000_000
          },

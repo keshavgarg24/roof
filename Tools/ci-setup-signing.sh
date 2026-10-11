@@ -1,6 +1,6 @@
 #!/bin/zsh
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (C) 2026 Canopy
+# Copyright (C) 2026 Roof
 
 # Imports the stable signing certificate into a keychain on CI so build.sh signs
 # releases with the same identity used locally. This keeps the bundle's
@@ -20,8 +20,8 @@ fi
 
 TMP="${RUNNER_TEMP:-/tmp}"
 KCPASS="ci-signing"
-KC="$TMP/canopy-signing.keychain-db"
-P12="$TMP/canopy-signing.p12"
+KC="$TMP/roof-signing.keychain-db"
+P12="$TMP/roof-signing.p12"
 
 printf '%s' "$SIGNING_CERT_P12" | base64 --decode > "$P12"
 security create-keychain -p "$KCPASS" "$KC"

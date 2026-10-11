@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AudioToolbox
 import Combine
@@ -15,7 +15,7 @@ struct MixerInputDevice: Identifiable, Equatable {
     fileprivate let audioObjectID: AudioObjectID
 }
 
-/// Keeps Canopy's preferred microphone in sync with macOS' global input.
+/// Keeps Roof's preferred microphone in sync with macOS' global input.
 /// This is intentionally separate from the per-app output mixer: selecting a
 /// microphone changes the system default input, without taps or audio capture.
 final class AudioInputDeviceManager: ObservableObject {

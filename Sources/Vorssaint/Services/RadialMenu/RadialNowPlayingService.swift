@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Foundation
@@ -276,12 +276,12 @@ enum RadialNowPlayingApplication {
         return icon
     }
 
-    /// The island and the radial card are non-activating panels, so Canopy
+    /// The island and the radial card are non-activating panels, so Roof
     /// rarely holds activation when one is clicked. Since macOS 14 a bare
     /// request from an inactive app is refused, and the player stayed behind.
     static func open(_ snapshot: RadialNowPlayingSnapshot) {
         if let application = runningApplication(for: snapshot) {
-            // A helper takes no activation; the handoff would leave Canopy in front.
+            // A helper takes no activation; the handoff would leave Roof in front.
             guard application.activationPolicy == .regular else { return }
             // Read before the unhide below: a hidden player's windows come back with it.
             let showsNoWindow = !application.isHidden && !hasWindowOnScreen(pid: application.processIdentifier)

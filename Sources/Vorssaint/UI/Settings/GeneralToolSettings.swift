@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import SwiftUI
@@ -61,7 +61,7 @@ struct GeneralToolSettings: View {
     }
 }
 
-/// Draws a system symbol in the menu bar in place of the Canopy glyph,
+/// Draws a system symbol in the menu bar in place of the Roof glyph,
 /// picked with one click from a gallery. The last cell takes any other symbol
 /// by name, and shows that symbol while it is the one in use.
 private struct MenuBarIconSymbolRow: View {

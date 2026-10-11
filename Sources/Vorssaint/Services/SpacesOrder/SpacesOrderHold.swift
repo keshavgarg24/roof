@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Darwin
@@ -497,7 +497,7 @@ final class SpacesOrderHold {
                     watch(isWanted)
                 }
             }
-            Self.log.info("Space rearranging was turned back on outside Canopy; fixed order turned off")
+            Self.log.info("Space rearranging was turned back on outside Roof; fixed order turned off")
         }
     }
 

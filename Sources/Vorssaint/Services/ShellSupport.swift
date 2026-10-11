@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import CoreServices
@@ -26,7 +26,7 @@ enum Shell {
 
 /// Runs a command with administrator privileges (system password prompt).
 enum AdminShell {
-    // Canopy is a menu-bar agent (LSUIElement), so it is rarely the active
+    // Roof is a menu-bar agent (LSUIElement), so it is rarely the active
     // app. SecurityAgent attaches its password dialog to the requesting process;
     // when that process is an inactive agent the dialog can open behind the
     // frontmost app and read as "no prompt appeared". Bringing the app forward
@@ -124,11 +124,13 @@ enum AdminShell {
 /// toggle without asking for the administrator password every time.
 /// The password is asked once, when installing (or removing) the rule.
 enum Sudoers {
-    static let rulePath = "/etc/sudoers.d/canopy-clamshell"
+    static let rulePath = "/etc/sudoers.d/roof-clamshell"
     // Rule files written under earlier names; removed whenever the rule is
     // (re)installed or removed, so the closed-lid permission migrates without an
     // extra password prompt.
     private static let legacyRulePaths = [
+        "/etc/sudoers.d/roof-utils-clamshell",
+        "/etc/sudoers.d/canopy-clamshell",
         "/etc/sudoers.d/canopy-utils-clamshell",
         "/etc/sudoers.d/vorss-clamshell",
     ]

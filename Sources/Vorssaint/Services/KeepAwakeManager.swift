@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Combine
@@ -675,7 +675,7 @@ final class KeepAwakeManager: ObservableObject {
             var id = IOPMAssertionID(0)
             let ok = IOPMAssertionCreateWithName("PreventUserIdleSystemSleep" as CFString,
                                                  IOPMAssertionLevel(kIOPMAssertionLevelOn),
-                                                 "Canopy: keep the Mac awake" as CFString,
+                                                 "Roof: keep the Mac awake" as CFString,
                                                  &id)
             if ok == kIOReturnSuccess {
                 systemAssertion = id
@@ -692,7 +692,7 @@ final class KeepAwakeManager: ObservableObject {
             var id = IOPMAssertionID(0)
             let ok = IOPMAssertionCreateWithName("PreventUserIdleDisplaySleep" as CFString,
                                                  IOPMAssertionLevel(kIOPMAssertionLevelOn),
-                                                 "Canopy: keep the display on" as CFString,
+                                                 "Roof: keep the display on" as CFString,
                                                  &id)
             if ok == kIOReturnSuccess {
                 displayAssertion = id

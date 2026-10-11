@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 /// Keyboard and accessibility actions have no mouse-tracking callbacks. They
 /// form a complete edit around the value write; dragging keeps its one shared

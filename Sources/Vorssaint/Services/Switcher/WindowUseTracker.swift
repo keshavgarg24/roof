@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import ApplicationServices
@@ -182,8 +182,8 @@ final class WindowUseTracker {
         guard let app = note.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication else { return }
         let pid = app.processIdentifier
         // Our own activation during a handoff is `ActivationHandoff`
-        // self-activating on the way out; ranking it would put Canopy ahead
-        // of the app the user left. Every other activation of Canopy, the
+        // self-activating on the way out; ranking it would put Roof ahead
+        // of the app the user left. Every other activation of Roof, the
         // Dock icon and its own windows included, is a real use and is kept.
         let own = pid == ProcessInfo.processInfo.processIdentifier && ActivationHandoff.isHandingOff
         // The application half is exact and free, so it lands right away; the
@@ -216,7 +216,7 @@ final class WindowUseTracker {
             shouldStopWatcher = false
             pendingStartAfterStop = false
             let thread = Thread { [weak self] in self?.runWatcher() }
-            thread.name = "Canopy Window Focus"
+            thread.name = "Roof Window Focus"
             thread.qualityOfService = .userInitiated
             watcherThread = thread
             return thread

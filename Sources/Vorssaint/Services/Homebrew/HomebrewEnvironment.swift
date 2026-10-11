@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Foundation
 
@@ -43,7 +43,7 @@ enum HomebrewEnvironment {
     /// its exports and skip slow or interactive work, the way editors that read
     /// the shell environment mark their run: `[[ -n $VORSSAINT_RESOLVING_ENVIRONMENT ]]`.
     /// The run is a child of this app, so a protected folder a startup file
-    /// touches asks for access in Canopy's name.
+    /// touches asks for access in Roof's name.
     static let resolvingVariable = "VORSSAINT_RESOLVING_ENVIRONMENT"
 
     /// A login shell reads `~/.zprofile`; an interactive one also reads

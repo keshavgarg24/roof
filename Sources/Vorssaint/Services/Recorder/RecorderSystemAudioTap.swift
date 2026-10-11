@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import Accelerate
 import AVFoundation
@@ -126,7 +126,7 @@ final class RecorderSystemAudioTap: @unchecked Sendable {
         guard let ownProcess = Self.ownProcessObject() else { return nil }
         self.ownProcess = ownProcess
         let description = CATapDescription(stereoGlobalTapButExcludeProcesses: [ownProcess])
-        description.name = "Canopy Recorder"
+        description.name = "Roof Recorder"
         description.isPrivate = true
         var tapID = AudioObjectID(0)
         guard AudioHardwareCreateProcessTap(description, &tapID) == noErr, tapID != 0 else {
@@ -204,7 +204,7 @@ final class RecorderSystemAudioTap: @unchecked Sendable {
         guard aggregateID == 0, let clock,
               let hostUID = Self.hostDeviceUID() else { return }
         let aggregate: [String: Any] = [
-            kAudioAggregateDeviceNameKey: "Canopy Recorder",
+            kAudioAggregateDeviceNameKey: "Roof Recorder",
             kAudioAggregateDeviceUIDKey: UUID().uuidString,
             kAudioAggregateDeviceIsPrivateKey: true,
             kAudioAggregateDeviceMainSubDeviceKey: hostUID,

@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import Foundation
 
-/// Switches WindowServer symbolic hotkeys off for as long as a Canopy
+/// Switches WindowServer symbolic hotkeys off for as long as a Roof
 /// feature wants a key macOS would otherwise answer, and gives them back on
 /// every exit path. Only ids that are enabled right now are ever touched, and
 /// the marker is written before each change so a crash can be repaired at the

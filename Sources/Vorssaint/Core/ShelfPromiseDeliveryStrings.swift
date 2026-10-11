@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 /// User-facing copy when an incoming file fails to finish saving
 /// or cannot fit on the shelf after it was accepted.

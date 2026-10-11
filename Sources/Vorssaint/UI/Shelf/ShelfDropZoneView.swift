@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import SwiftUI
 
@@ -77,7 +77,7 @@ private struct ShelfPill: View {
 
     }
 
-    /// The Canopy mark, quiet, so the pill is unmistakably the app's; it
+    /// The Roof mark, quiet, so the pill is unmistakably the app's; it
     /// flips to a green tick for a beat right after a catch.
     @ViewBuilder
     private var leadingGlyph: some View {

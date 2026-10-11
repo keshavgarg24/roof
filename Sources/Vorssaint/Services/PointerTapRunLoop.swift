@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import CoreGraphics
 import Foundation
@@ -54,7 +54,7 @@ enum PointerTapRunLoop {
                 CFRunLoopRunInMode(.defaultMode, .greatestFiniteMagnitude, false)
             }
         }
-        thread.name = "Canopy Pointer Input"
+        thread.name = "Roof Pointer Input"
         thread.qualityOfService = .userInteractive
         thread.start()
         // The wait orders the write above against the read below.

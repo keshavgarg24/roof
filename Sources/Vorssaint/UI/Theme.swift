@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import SwiftUI
 
 /// Shared look & feel: brand colors, card styling and the brand mark.
 enum Theme {
-    /// Sky-to-deep-blue gradient — the Canopy brand background used in
+    /// Sky-to-deep-blue gradient — the Roof brand background used in
     /// the welcome screen, brand badge, and icon cards.
     static let spaceGradient = LinearGradient(
         colors: [

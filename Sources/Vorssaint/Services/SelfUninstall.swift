@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Copyright (C) 2026 Canopy
+// Copyright (C) 2026 Roof
 
 import AppKit
 import ServiceManagement
@@ -66,7 +66,7 @@ enum SelfUninstall {
     }
 
     /// Clears permissions, removes preferences and saved state, sends the app
-    /// bundle to the Trash and quits. Used by "Uninstall Canopy completely".
+    /// bundle to the Trash and quits. Used by "Uninstall Roof completely".
     /// A failure passes the message explaining what stopped it.
     static func uninstallCompletely(onFailure: @escaping (String) -> Void) {
         // A failed reset may have changed some grants. Recheck them before
