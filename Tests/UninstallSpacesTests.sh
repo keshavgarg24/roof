@@ -1,6 +1,6 @@
 #!/bin/zsh
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (C) 2026 Vorssaint
+# Copyright (C) 2026 Canopy
 
 # Runs the real Space arrangement check from Tools/uninstall.sh, lifted out of
 # the script so nothing here quits, resets or removes anything.

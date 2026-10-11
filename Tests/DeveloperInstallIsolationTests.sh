@@ -1,6 +1,6 @@
 #!/bin/zsh
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright (C) 2026 Vorssaint
+# Copyright (C) 2026 Canopy
 
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -24,30 +24,30 @@ sign_installed_bundle() { signed+=("$1"); }
 for DEV in 1 0; do
     stopped=()
     signed=()
-    for name in Vorss 'Vorssaint Utils' Vorssaint 'Vorssaint (Developer)'; do
+    for name in Vorss 'Canopy Utils' Canopy 'Canopy (Developer)'; do
         mkdir -p "$install_test_dir/Applications/$name.app"
         print original > "$install_test_dir/Applications/$name.app/content"
     done
     if (( DEV )); then
-        APP_NAME='Vorssaint (Developer)'
-        EXECUTABLE=VorssaintDeveloper
+        APP_NAME='Canopy (Developer)'
+        EXECUTABLE=CanopyDeveloper
     else
-        APP_NAME=Vorssaint
-        EXECUTABLE=Vorssaint
+        APP_NAME=Canopy
+        EXECUTABLE=Canopy
     fi
     source "$install_test_dir/install.zsh"
     [[ "$(cat "$install_test_dir/Applications/$APP_NAME.app/content")" == new ]]
     [[ "${signed[*]}" == "$install_test_dir/Applications/$APP_NAME.app" ]]
     if (( DEV )); then
-        [[ "${stopped[*]}" == VorssaintDeveloper ]]
-        for name in Vorss 'Vorssaint Utils' Vorssaint; do
+        [[ "${stopped[*]}" == CanopyDeveloper ]]
+        for name in Vorss 'Canopy Utils' Canopy; do
             [[ "$(cat "$install_test_dir/Applications/$name.app/content")" == original ]]
         done
     else
-        [[ "${stopped[*]}" == 'Vorssaint Vorss VorssaintUtils' ]]
+        [[ "${stopped[*]}" == 'Canopy Vorss CanopyUtils' ]]
         [[ ! -e "$install_test_dir/Applications/Vorss.app" ]]
-        [[ ! -e "$install_test_dir/Applications/Vorssaint Utils.app" ]]
-        [[ "$(cat "$install_test_dir/Applications/Vorssaint (Developer).app/content")" == original ]]
+        [[ ! -e "$install_test_dir/Applications/Canopy Utils.app" ]]
+        [[ "$(cat "$install_test_dir/Applications/Canopy (Developer).app/content")" == original ]]
     fi
 done
 print 'DEVELOPER INSTALL ISOLATION TESTS OK'
