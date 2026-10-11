@@ -61,7 +61,11 @@ final class GlobalHotkeysService: ObservableObject {
     }
 
     private func stopTap() {
-        if let tap = eventTap { CGEvent.tapEnable(tap: tap, enable: false); eventTap = nil }
+        if let tap = eventTap {
+            CGEvent.tapEnable(tap: tap, enable: false)
+            CFMachPortInvalidate(tap)
+            eventTap = nil
+        }
     }
 
     private func handleEvent(_ event: CGEvent) -> Unmanaged<CGEvent>? {

@@ -25,14 +25,14 @@ struct SystemHealthSettings: View {
             if let snap = svc.snapshot {
                 Section(s.cpuSection) {
                     if let temp = snap.cpuTemperature {
-                        row(s.temperatureLabel, value: String(format: "%.1f°C", temp))
+                        row(s.temperatureLabel, value: "\(temp.formatted(.number.precision(.fractionLength(1))))°C")
                     } else {
                         row(s.temperatureLabel, value: "—")
                     }
                 }
 
                 Section(s.memorySection) {
-                    row(s.overallLabel, value: String(format: "%.1f / %.1f GB", snap.memoryUsedGB, snap.memoryTotalGB))
+                    row(s.overallLabel, value: "\(snap.memoryUsedGB.formatted(.number.precision(.fractionLength(1)))) / \(snap.memoryTotalGB.formatted(.number.precision(.fractionLength(1)))) GB")
                     row(s.pressureLabel, value: pressureLabel(snap.memoryPressureLevel))
                 }
 
@@ -42,7 +42,7 @@ struct SystemHealthSettings: View {
                 }
 
                 Section(s.diskSection) {
-                    row(s.overallLabel, value: String(format: "%.1f GB free / %.1f GB total", snap.diskFreeGB, snap.diskTotalGB))
+                    row(s.overallLabel, value: "\(snap.diskFreeGB.formatted(.number.precision(.fractionLength(1)))) GB free / \(snap.diskTotalGB.formatted(.number.precision(.fractionLength(1)))) GB total")
                     row(s.smartStatusLabel, value: snap.diskSmartPassed.map { $0 ? s.smartPassedLabel : s.smartFailingLabel } ?? "—")
                 }
             } else if !svc.isRefreshing {

@@ -386,7 +386,7 @@ enum FeatureCatalogTests {
 
         // MARK: Features hub catalog
 
-        suite.expect(AppFeature.allCases.count == 107, "feature catalog has 107 features")
+        suite.expect(AppFeature.allCases.count == 112, "feature catalog has 112 features")
         suite.expect(Set(AppFeature.allCases.map(\.rawValue)).count == AppFeature.allCases.count,
                "feature ids are unique")
         suite.expect(AppFeature.allCases.map(\.rawValue) == [
@@ -408,6 +408,7 @@ enum FeatureCatalogTests {
             "storageAnalyzer", "developerCleaner", "formatConverter", "menuBarTidy", "externalDisplay",
             "smartTrash", "globalHotkeys", "secretVault", "notificationHistory", "packageTracker",
             "timeTracker", "environmentManager", "windowSession", "systemHealth", "fileTagManager",
+            "qrCodeGenerator", "jsonFormatter", "unitConverter", "appTimer", "wifiScanner",
         ], "feature ids are stable (they persist inside availability keys)")
         suite.expect(MouseAccelerationSupport.validatedRegistryID(nil) == nil
                 && MouseAccelerationSupport.validatedRegistryID(0) == nil
@@ -1314,7 +1315,7 @@ enum FeatureCatalogTests {
                "Window Layout does not poll permissions when every snap zone is off")
 
         suite.expect(activeSet(.accessibility)
-                == [.windowLayout, .cleaningMode, .commandBar, .screenRecorder],
+                == [.windowLayout, .cleaningMode, .commandBar, .screenRecorder, .windowResizer],
                "with nothing enabled only on-demand features use accessibility")
         func radialMenuUsesAccessibility(_ profile: RadialMenuProfile, legacyItems: [RadialMenuItem]) -> Bool {
             let stored = [DefaultsKey.radialMenuProfiles: RadialMenuSupport.encodeProfiles([profile]),
@@ -1760,8 +1761,8 @@ enum FeatureCatalogTests {
 
         // MARK: Hub presets and energy badges
 
-        suite.expect(FeaturePreset.allCases.count == 3,
-               "three starting points, not another wall of decisions")
+        suite.expect(FeaturePreset.allCases.count == 5,
+               "five starting-point presets available")
         suite.expect(FeaturePreset.allCases.allSatisfy { !$0.features.isEmpty },
                "every preset installs something")
         suite.expect(FeaturePreset.essential.features.contains(.mixer)

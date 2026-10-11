@@ -317,7 +317,7 @@ struct NotchAudioControls: View {
     /// Under the player the readout is the slider itself; a glyph opens the chooser.
     private var inlineOutputMenu: some View {
         NotchMenuButton(title: l10n.s.mixerSystemOutputTitle, items: outputItems) {
-            Image(systemName: "airplay.audio")
+            Image(systemName: "dot.radiowaves.left.and.right")
                 .font(.system(size: 14))
                 .foregroundStyle(.secondary)
                 .padding(.horizontal, 4)

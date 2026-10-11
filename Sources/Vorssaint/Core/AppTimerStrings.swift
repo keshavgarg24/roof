@@ -22,7 +22,7 @@ struct AppTimerStrings {
 extension AppTimerStrings {
     static let enUS = AppTimerStrings(
         pageTitle: "App Timer",
-        hubDescription: "Set daily usage limits for any app — get notified when you've hit the limit.",
+        hubDescription: "Set daily usage limits for any app — get notified when you’ve hit the limit.",
         addLimitButton: "Add Limit",
         deleteLimitButton: "Remove",
         appLabel: "App",
@@ -30,7 +30,7 @@ extension AppTimerStrings {
         usedTodayLabel: "Used today",
         noLimitsCaption: "No app limits configured yet.",
         limitReachedTitle: "Time Limit Reached",
-        limitReachedBody: "You've hit your daily limit for %@.",
+        limitReachedBody: "You’ve hit your daily limit for %@.",
         minutesSuffix: "min",
         resetDailyLabel: "Limits reset at midnight",
         enabledLabel: "Enable App Timer"

@@ -151,14 +151,28 @@ enum ColorConverterSupport {
 
     // MARK: - Format strings
 
+    // Code output always uses en_US decimal (period), not the user's locale.
+    private static let codeFmt3: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.locale = Locale(identifier: "en_US")
+        nf.minimumFractionDigits = 3; nf.maximumFractionDigits = 3
+        return nf
+    }()
+    private static let codeFmt2: NumberFormatter = {
+        let nf = NumberFormatter()
+        nf.locale = Locale(identifier: "en_US")
+        nf.minimumFractionDigits = 2; nf.maximumFractionDigits = 2
+        return nf
+    }()
+    private static func f3(_ v: Double) -> String { codeFmt3.string(from: NSNumber(value: v)) ?? "\(v)" }
+    private static func f2(_ v: Double) -> String { codeFmt2.string(from: NSNumber(value: v)) ?? "\(v)" }
+
     static func toSwiftUI(_ rgb: RGBColor) -> String {
-        String(format: "Color(red: %.3f, green: %.3f, blue: %.3f, opacity: %.3f)",
-               rgb.r / 255, rgb.g / 255, rgb.b / 255, rgb.a)
+        "Color(red: \(f3(rgb.r/255)), green: \(f3(rgb.g/255)), blue: \(f3(rgb.b/255)), opacity: \(f3(rgb.a)))"
     }
 
     static func toCSSRGBA(_ rgb: RGBColor) -> String {
-        String(format: "rgba(%d, %d, %d, %.2f)",
-               Int(rgb.r.rounded()), Int(rgb.g.rounded()), Int(rgb.b.rounded()), rgb.a)
+        "rgba(\(Int(rgb.r.rounded())), \(Int(rgb.g.rounded())), \(Int(rgb.b.rounded())), \(f2(rgb.a)))"
     }
 }
 

@@ -24,14 +24,14 @@ struct AppRelauncherStrings {
         relaunchButton: "Relaunch",
         relaunchFrontmostButton: "Relaunch Frontmost App",
         clearPrefsToggle: "Reset preferences on relaunch",
-        clearPrefsCaption: "Deletes the app's UserDefaults plist before relaunching.",
+        clearPrefsCaption: "Deletes the app’s UserDefaults plist before relaunching.",
         runningAppsTitle: "Running Apps",
         runningAppsCaption: "Tap Relaunch to quit and immediately restart an app.",
         relaunchingLabel: "Relaunching…",
         relaunchedLabel: "Relaunched",
         noRunningApps: "No apps running.",
         frontmostLabel: "Frontmost",
-        confirmClearPrefs: "This will delete the app's saved preferences. Continue?"
+        confirmClearPrefs: "This will delete the app’s saved preferences. Continue?"
     )
 }
 

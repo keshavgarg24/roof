@@ -99,7 +99,7 @@ struct ColorConverterSettings: View {
             Text(s.rgbLabel)
                 .foregroundStyle(.secondary)
                 .frame(width: 40, alignment: .leading)
-            Text(String(format: "%.0f, %.0f, %.0f", service.rgb.r, service.rgb.g, service.rgb.b))
+            Text("\(Int(service.rgb.r.rounded())), \(Int(service.rgb.g.rounded())), \(Int(service.rgb.b.rounded()))")
                 .font(.system(.body, design: .monospaced))
                 .textSelection(.enabled)
         }
@@ -110,7 +110,7 @@ struct ColorConverterSettings: View {
             Text(s.hslLabel)
                 .foregroundStyle(.secondary)
                 .frame(width: 40, alignment: .leading)
-            Text(String(format: "%.1f°, %.1f%%, %.1f%%", service.hsl.h, service.hsl.s, service.hsl.l))
+            Text("\(service.hsl.h.formatted(.number.precision(.fractionLength(1))))°, \(service.hsl.s.formatted(.number.precision(.fractionLength(1))))%, \(service.hsl.l.formatted(.number.precision(.fractionLength(1))))%")
                 .font(.system(.body, design: .monospaced))
                 .textSelection(.enabled)
         }
@@ -121,7 +121,7 @@ struct ColorConverterSettings: View {
             Text(s.hsbLabel)
                 .foregroundStyle(.secondary)
                 .frame(width: 40, alignment: .leading)
-            Text(String(format: "%.1f°, %.1f%%, %.1f%%", service.hsb.h, service.hsb.s, service.hsb.b))
+            Text("\(service.hsb.h.formatted(.number.precision(.fractionLength(1))))°, \(service.hsb.s.formatted(.number.precision(.fractionLength(1))))%, \(service.hsb.b.formatted(.number.precision(.fractionLength(1))))%")
                 .font(.system(.body, design: .monospaced))
                 .textSelection(.enabled)
         }

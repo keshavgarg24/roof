@@ -1972,9 +1972,9 @@ enum SwitcherModelFeatureTests {
                "support prompt never leaks into another release or a beta")
         suite.expect(AppInfo.discordURL.absoluteString == "https://discord.gg/M6BwWH4BJp",
                "the community action uses the permanent Discord invitation")
-        suite.expect(AppInfo.coffeeURL.absoluteString == "https://buymeacoffee.com/vorssaint",
-               "financial support uses Buy Me a Coffee")
-        suite.expect(AppInfo.socialURL.absoluteString == "https://x.com/vorssaint",
+        suite.expect(AppInfo.coffeeURL.absoluteString == "https://github.com/keshavgarg24/canopy",
+               "financial support links to project page")
+        suite.expect(AppInfo.socialURL.absoluteString == "https://x.com/canopy_mac",
                "social previews keep the official X profile")
         // AppInfo.version falls back to "dev" in this bare harness, so read
         // the plist the shipped app will actually carry. The pin is a
