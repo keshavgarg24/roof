@@ -78,11 +78,19 @@ enum PanelSurface {
     }
 
     static func baseFill(for scheme: ColorScheme) -> Color {
-        scheme == .light ? Color.white.opacity(0.68) : Color.black.opacity(0.42)
+        if scheme == .light {
+            return Color(red: 0.94, green: 0.97, blue: 1.0).opacity(0.72)
+        } else {
+            return Color(red: 0.06, green: 0.12, blue: 0.24).opacity(0.55)
+        }
     }
 
     static func cardFill(for scheme: ColorScheme) -> Color {
-        scheme == .light ? Color.white.opacity(0.38) : Color.white.opacity(0.075)
+        if scheme == .light {
+            return Color(red: 0.93, green: 0.97, blue: 1.0).opacity(0.42)
+        } else {
+            return Color(red: 0.10, green: 0.18, blue: 0.38).opacity(0.14)
+        }
     }
 
     static func controlFill(for scheme: ColorScheme) -> Color {
