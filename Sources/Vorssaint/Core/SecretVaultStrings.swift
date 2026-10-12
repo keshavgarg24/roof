@@ -26,7 +26,7 @@ struct SecretVaultStrings {
 
     static let enUS = SecretVaultStrings(
         pageTitle: "Secret Vault",
-        hubDescription: "Securely store API keys, tokens and credentials in macOS Keychain — never in plain text.",
+        hubDescription: "Securely store API keys, tokens and credentials in macOS Keychain, never in plain text.",
         addSecretButton: "Add Secret",
         copyButton: "Copy",
         deleteButton: "Delete",

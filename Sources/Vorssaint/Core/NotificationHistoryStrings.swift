@@ -21,7 +21,7 @@ struct NotificationHistoryStrings {
 
     static let enUS = NotificationHistoryStrings(
         pageTitle: "Notification History",
-        hubDescription: "A persistent log of every notification so nothing gets lost — searchable and filterable.",
+        hubDescription: "A persistent log of every notification so nothing gets lost, searchable and filterable.",
         clearAllButton: "Clear All",
         filterAllLabel: "All Apps",
         searchPlaceholder: "Search notifications…",

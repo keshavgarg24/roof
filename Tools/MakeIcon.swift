@@ -117,15 +117,15 @@ func renderAppIcon(px: Int) -> Data? {
 // The mark is ~1.97:1, so fitting it into a fixed box made the width the
 // limiting side and left the height unused, rendering it far shorter than the
 // menu bar icons around it. Size from the height and let the width follow.
-let menuBarGlyphHeight: CGFloat = 9.0
+let menuBarGlyphHeight: CGFloat = 9.5
 // Centered geometrically the mark reads high, since the thin ring tails carry
 // the bounding box below the planet body. Drop it onto the same visual floor
 // as its neighbours.
-let menuBarGlyphDrop: CGFloat = 1
+let menuBarGlyphDrop: CGFloat = 0.5
 // Taller than the mark needs: the same canvas holds the compact Keep Awake
 // symbols. Keep in sync with BlackHoleGlyph.pointSize in
 // Sources/Vorssaint/App/StatusItemController.swift; `--selftest` enforces it.
-let menuBarCanvas = (width: 26, height: 20)
+let menuBarCanvas = (width: 22, height: 18)
 
 func renderMenuBarIcon(scale: Int) -> Data? {
     let width = menuBarCanvas.width * scale, height = menuBarCanvas.height * scale

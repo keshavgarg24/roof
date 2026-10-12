@@ -24,7 +24,7 @@ struct TimeTrackerStrings {
 
     static let enUS = TimeTrackerStrings(
         pageTitle: "Time Tracker",
-        hubDescription: "Track time on any project from the menu bar — daily and weekly summaries built in.",
+        hubDescription: "Track time on any project from the menu bar, daily and weekly summaries built in.",
         startButton: "Start",
         stopButton: "Stop",
         newEntryButton: "New Entry",

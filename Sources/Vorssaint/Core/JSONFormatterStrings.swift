@@ -22,7 +22,7 @@ struct JSONFormatterStrings {
 extension JSONFormatterStrings {
     static let enUS = JSONFormatterStrings(
         pageTitle: "JSON Formatter",
-        hubDescription: "Format, minify, and validate JSON — paste from clipboard or type directly.",
+        hubDescription: "Format, minify, and validate JSON, paste from clipboard or type directly.",
         inputLabel: "JSON Input",
         inputPlaceholder: "Paste JSON here…",
         formatButton: "Format",

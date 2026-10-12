@@ -32,7 +32,7 @@ struct TextTransformerStrings {
 
     static let enUS = TextTransformerStrings(
         pageTitle: "Text Transformer",
-        hubDescription: "Transform clipboard text in the Command Bar — case, encoding, sorting and more.",
+        hubDescription: "Transform clipboard text in the Command Bar, case, encoding, sorting and more.",
         subtitle: "Text Transformer",
         noClipboardText: "No text in clipboard",
         resultCopied: "Result copied",

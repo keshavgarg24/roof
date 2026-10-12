@@ -24,7 +24,7 @@ struct FileTagManagerStrings {
 
     static let enUS = FileTagManagerStrings(
         pageTitle: "File Tag Manager",
-        hubDescription: "Manage Finder tags across files and folders — with auto-tag rules for Downloads and more.",
+        hubDescription: "Manage Finder tags across files and folders, with auto-tag rules for Downloads and more.",
         addTagButton: "New Tag",
         deleteTagButton: "Delete Tag",
         tagFilesButton: "Tag Files…",

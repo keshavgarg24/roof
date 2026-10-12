@@ -24,7 +24,7 @@ struct FormatConverterStrings {
 
     static let enUS = FormatConverterStrings(
         pageTitle: "Format Converter",
-        hubDescription: "Convert audio, images and videos between formats locally — no uploads, no cloud.",
+        hubDescription: "Convert audio, images and videos between formats locally, no uploads, no cloud.",
         addFilesButton: "Add Files…",
         clearButton: "Clear",
         convertButton: "Convert",

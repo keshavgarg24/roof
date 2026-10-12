@@ -20,7 +20,7 @@ struct ExternalDisplayStrings {
 
     static let enUS = ExternalDisplayStrings(
         pageTitle: "External Display",
-        hubDescription: "Control external monitor brightness, volume and contrast using DDC — no extra cables.",
+        hubDescription: "Control external monitor brightness, volume and contrast using DDC, no extra cables.",
         brightnessLabel: "Brightness",
         volumeLabel: "Volume",
         contrastLabel: "Contrast",

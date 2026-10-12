@@ -20,7 +20,7 @@ struct AppRelauncherStrings {
 
     static let enUS = AppRelauncherStrings(
         pageTitle: "App Relauncher",
-        hubDescription: "Kill and instantly relaunch any running app — optionally resetting its preferences.",
+        hubDescription: "Kill and instantly relaunch any running app, optionally resetting its preferences.",
         relaunchButton: "Relaunch",
         relaunchFrontmostButton: "Relaunch Frontmost App",
         clearPrefsToggle: "Reset preferences on relaunch",

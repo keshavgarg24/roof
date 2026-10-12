@@ -19,7 +19,7 @@ struct MenuBarTidyStrings {
 
     static let enUS = MenuBarTidyStrings(
         pageTitle: "Menu Bar Tidy",
-        hubDescription: "Declutter your menu bar — hide, reorder and group icons from any app.",
+        hubDescription: "Declutter your menu bar, hide, reorder and group icons from any app.",
         visibleSection: "Visible",
         hiddenSection: "Hidden",
         hideButton: "Hide",

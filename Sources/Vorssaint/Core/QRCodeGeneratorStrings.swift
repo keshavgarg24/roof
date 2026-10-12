@@ -20,7 +20,7 @@ struct QRCodeGeneratorStrings {
 extension QRCodeGeneratorStrings {
     static let enUS = QRCodeGeneratorStrings(
         pageTitle: "QR Code Generator",
-        hubDescription: "Turn any text, URL, or contact into a scannable QR code — copy or save as PNG.",
+        hubDescription: "Turn any text, URL, or contact into a scannable QR code, copy or save as PNG.",
         inputLabel: "Content",
         inputPlaceholder: "Enter text or URL…",
         generateButton: "Generate",

@@ -26,7 +26,7 @@ struct StorageAnalyzerStrings {
 
     static let enUS = StorageAnalyzerStrings(
         pageTitle: "Storage Analyzer",
-        hubDescription: "Visualize what’s eating your disk — by app, cache, media, downloads and developer junk.",
+        hubDescription: "Visualize what’s eating your disk, by app, cache, media, downloads and developer junk.",
         scanButton: "Scan Now",
         scanningLabel: "Scanning…",
         totalLabel: "Total",

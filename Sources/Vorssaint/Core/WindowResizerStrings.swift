@@ -22,7 +22,7 @@ struct WindowResizerStrings {
 
     static let enUS = WindowResizerStrings(
         pageTitle: "Window Resizer",
-        hubDescription: "Set any window to exact pixel dimensions — great for testing responsive designs.",
+        hubDescription: "Set any window to exact pixel dimensions, great for testing responsive designs.",
         subtitle: "Window Resizer",
         presetsTitle: "Presets",
         presetsCaption: "Click any preset in the Command Bar to resize the focused window instantly.",

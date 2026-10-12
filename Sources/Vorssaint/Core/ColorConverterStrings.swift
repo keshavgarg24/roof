@@ -28,7 +28,7 @@ struct ColorConverterStrings {
 
     static let enUS = ColorConverterStrings(
         pageTitle: "Color Converter",
-        hubDescription: "Convert colors between HEX, RGB, HSL, HSB and more — paste any format.",
+        hubDescription: "Convert colors between HEX, RGB, HSL, HSB and more, paste any format.",
         inputLabel: "Color",
         inputPlaceholder: "Paste a color (#FF5733, rgb(255,87,51), hsl(11,100%,60%)…)",
         pasteButton: "Paste",

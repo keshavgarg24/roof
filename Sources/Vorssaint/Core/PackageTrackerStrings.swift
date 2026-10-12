@@ -24,7 +24,7 @@ struct PackageTrackerStrings {
 
     static let enUS = PackageTrackerStrings(
         pageTitle: "Package Tracker",
-        hubDescription: "See all Homebrew, npm, pip and gem packages in one place — with one-click updates.",
+        hubDescription: "See all Homebrew, npm, pip and gem packages in one place, with one-click updates.",
         refreshButton: "Refresh",
         updateAllButton: "Update All",
         searchPlaceholder: "Search packages…",

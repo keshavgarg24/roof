@@ -22,7 +22,7 @@ struct AppTimerStrings {
 extension AppTimerStrings {
     static let enUS = AppTimerStrings(
         pageTitle: "App Timer",
-        hubDescription: "Set daily usage limits for any app — get notified when you’ve hit the limit.",
+        hubDescription: "Set daily usage limits for any app, get notified when you’ve hit the limit.",
         addLimitButton: "Add Limit",
         deleteLimitButton: "Remove",
         appLabel: "App",
